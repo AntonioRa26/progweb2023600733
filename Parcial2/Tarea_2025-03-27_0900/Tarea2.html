@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murciegalo</title>
+</head>
+<body>
+    <h1>Palabra "murcielago"</h1>
+    <p id="vocales"></p>
+    <p id="consonantes"></p>
+    <p id="idiomaEfe"></p>
+
+    <script>
+        let palabra = "murcielago";
+        let vocales = "aeiouAEIOU";
+        let numVocales = 0;
+        let numConsonantes = 0;
+        let idiomaEfe = "";
+
+        for (let letra of palabra) {
+            if (vocales.includes(letra)) {
+                numVocales++;
+                idiomaEfe += letra + "f" + letra;
+            } else {
+                numConsonantes++;
+                idiomaEfe += letra;
+            }
+        }
+
+        document.getElementById("vocales").textContent = "Numero de vocales: " + numVocales;
+        document.getElementById("consonantes").textContent = "Numero de consonantes: " + numConsonantes;
+        document.getElementById("idiomaEfe").textContent = "EFE: " + idiomaEfe;
+    </script>
+</body>
+</html>

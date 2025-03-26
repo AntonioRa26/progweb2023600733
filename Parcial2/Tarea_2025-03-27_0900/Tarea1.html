@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie Numérica</title>
+</head>
+<body>
+    <h1>Serie numérica de 2 a 400</h1>
+    <p id="serie"></p>
+    <p id="promedio"></p>
+    <p id="mediana"></p>
+
+    <script>
+        let serie = [];
+        for (let i = 2; i <= 400; i += 2) {
+            serie.push(i);
+        }
+
+        document.getElementById("serie").textContent = "Serie: " + serie.join(", ");
+
+        let suma = serie.reduce((a, b) => a + b, 0);
+        let promedio = suma / serie.length;
+        document.getElementById("promedio").textContent = "Promedio: " + promedio;
+
+        let mid = Math.floor(serie.length / 2);
+        let mediana = serie.length % 2 === 0 ? (serie[mid - 1] + serie[mid]) / 2 : serie[mid];
+        document.getElementById("mediana").textContent = "Mediana: " + mediana;
+    </script>
+</body>
+</html>
