@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo</title>
+</head>
+<body>
+    <h1>Operaciones con un Arreglo Compuesto</h1>
+
+    <script>
+        let arreglo = [10, "UN", true, 12, " GUSTO EN CONOCERTE", false, 20, "!", true];
+
+        let suma = 0;
+        let texto = "";
+        let booleano = true;
+
+        for (let valor of arreglo) {
+            if (valor * 0 === 0) suma += valor; 
+            if (valor.charAt) texto += valor;   
+            if (valor === true || valor === false) booleano = booleano && valor; 
+        }
+
+        document.write("Suma de números: " + suma + "<br>");
+        document.write("Concatenación de cadenas: " + texto + "<br>");
+        document.write("AND de booleanos: " + booleano);
+    </script>
+</body>
+</html>

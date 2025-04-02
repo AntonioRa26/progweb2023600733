@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meses del Año</title>
+</head>
+<body>
+    <h1>Meses del Año con su Ordinal</h1>
+
+    <script>
+        function obtenerMeses() {
+            return ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+                    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        }
+
+        function obtenerOrdinales() {
+            return ["1ro", "2do", "3ro", "4to", "5to", "6to", 
+                    "7mo", "8vo", "9no", "10mo", "11vo", "12vo"];
+        }
+
+        function mostrarMeses() {
+            let meses = obtenerMeses();
+            let ordinales = obtenerOrdinales();
+
+            for (let i = 0; i < meses.length; i++) {
+                document.write(ordinales[i] + " - " + meses[i] + "<br>");
+            }
+        }
+
+        mostrarMeses();
+    </script>
+</body>
+</html>
