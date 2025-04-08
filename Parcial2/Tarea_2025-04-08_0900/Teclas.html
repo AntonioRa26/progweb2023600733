@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Colores con Teclas</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .teclado {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .fila {
+            display: flex;
+            justify-content: center;
+        }
+
+        .tecla {
+            border: 2px solid black;
+            padding: 20px;
+            margin: 5px;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #eee;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Presiona una de estas teclas:</h2>
+
+    <div class="teclado">
+        <div class="fila">
+            <div class="tecla">W</div>
+        </div>
+        <div class="fila">
+            <div class="tecla">A</div>
+            <div class="tecla">S</div>
+            <div class="tecla">D</div>
+        </div>
+        <div class="fila">
+            <div class="tecla">Z</div>
+            <div class="tecla">X</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("keydown", function(event) {
+            let key = event.key.toLowerCase();
+
+            if (key === "w") {
+                document.body.style.backgroundColor = "red";
+            }
+            if (key === "a") {
+                document.body.style.backgroundColor = "blue";
+            }
+            if (key === "s") {
+                document.body.style.backgroundColor = "green";
+            }
+            if (key === "d") {
+                document.body.style.backgroundColor = "yellow";
+            }
+            if (key === "z") {
+                document.body.style.backgroundColor = "purple";
+            }
+            if (key === "x") {
+                document.body.style.backgroundColor = "orange";
+            }
+        });
+    </script>
+</body>
+</html>
